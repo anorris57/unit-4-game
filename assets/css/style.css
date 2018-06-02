@@ -1,0 +1,15 @@
+#control {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-style: solid;
+  border-color: red;
+  border-width: medium;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
