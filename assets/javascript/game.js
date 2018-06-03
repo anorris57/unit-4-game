@@ -8,9 +8,13 @@ var diamondRandomNumber;
 var lovelyRandomNumber;
 var lovelyRandomNumber;
 var counter = 0;
+var lost = 0;
+var win = 0;
+
+var resetAndStart = function () {
 
   controlRandomNumber = Math.floor((Math.random() * 121) + 18);
-  $("#control").text(controlRandomNumber);
+  $("#control").html("Random number to match: " + controlRandomNumber);
  /* function generate() {
   controlRandomNumber = Math.floor((Math.random() * 121) + 18);
   $("#control").text(controlRandomNumber);
@@ -49,7 +53,11 @@ $("#img4").attr("data-value", purpleRandomNumber);
 
 $(".four").text($("#img4").attr("data-value"));
 
+$("#totScore").html("Total Score: " + counter);
 
+}// closes startGame
+
+resetAndStart();//calls function so when page loads it sets up
 //html.12
 $(".crystal-image").on("click", function() {
 
@@ -61,14 +69,28 @@ $(".crystal-image").on("click", function() {
   counter += crystalValue;
 
   // All of the same game win-lose logic applies. So the rest remains unchanged.
-  alert("New score: " + counter);
+   $("#totScore").html("Your total score is: " + counter);
 
   if (counter === controlRandomNumber) {
-    alert("You win!");
+
+    win++;
+
+    $("#win").html("You win: " + win);
+    //alert("You win!" + win);
+    counter = 0;
+
+    resetAndStart();
   }
 
   else if (counter >= controlRandomNumber) {
-    alert("You lose!!");
+
+    lost++;
+
+    $("#lost").html("You lost " + lost);
+    //alert("You lose!!" + lost);
+    counter = 0;
+
+    resetAndStart();
   }
 
 });
