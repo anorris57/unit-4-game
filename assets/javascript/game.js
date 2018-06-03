@@ -13,7 +13,7 @@ var win = 0;
 
 var resetAndStart = function () {
 
-  controlRandomNumber = Math.floor((Math.random() * 121) + 18);
+  controlRandomNumber = Math.floor((Math.random() * 102) + 19);
   $("#control").html("Random number to match: " + controlRandomNumber);
  /* function generate() {
   controlRandomNumber = Math.floor((Math.random() * 121) + 18);
@@ -75,7 +75,7 @@ $(".crystal-image").on("click", function() {
 
     win++;
 
-    $("#win").html("You win: " + win);
+    $("#win").html("Wins: " + win);
     //alert("You win!" + win);
     counter = 0;
 
@@ -86,7 +86,7 @@ $(".crystal-image").on("click", function() {
 
     lost++;
 
-    $("#lost").html("You lost " + lost);
+    $("#lost").html("Losses: " + lost);
     //alert("You lose!!" + lost);
     counter = 0;
 

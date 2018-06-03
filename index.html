@@ -12,8 +12,26 @@
   </head>
   
   <body>
+
+    <div class="container bg-light">
       
-    <div></div>
+    <div class="container">
+      <div class="row">
+        <div id="title" class="col-md-8 offset-md-2">
+          <h1>CrystalsCollector</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="text" class="col">
+          <p class="text-info font-weight-bold">
+            You will be given a random number at the start of the game. <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You win the game by mathing your total score to the random number.<br>You lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you. When you click a crystal the total score will increase and you will be have to figure out the value of each crystal.<br>Each time the game starts, the random number and values of the crystals will change.
+          </p>
+        </div>
+      </div>
+    </div>
       <div class="container">
         <div class="card-deck">
           <div id="img1" class="card img-fluid crystal-image">
@@ -47,19 +65,21 @@
         </div><!--closes card deck-->
       </div><!--closes container-->
       
-    <div class="container">
+    <div id="lowerRow" class="container font-weight-bold">
       <div class="row">
-        <div id="control" class="col bg-primary text-black"><p>1</p></div>
-        <div id="totScore" class="col bg-info"><p>1</p></div>
+        <div id="control" class="col bg-primary text-black"><p class="font-weight-bold"></p></div>
+        <div id="totScore" class="col bg-info"><p></p></div>
         <div class="col bg-success">
-          <p id="win">1</p>
-          <p id="lost">1</p>
+          <p>Game Statistics</p>
+          <p id="win"></p>
+          <p id="lost"></p>
         </div>
 
       </div><!--closes row-->
 
     </div><!--closes info container-->
-
+ 
+    </div>
 
 
 
