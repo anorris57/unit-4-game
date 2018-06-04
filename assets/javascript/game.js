@@ -15,11 +15,7 @@ var resetAndStart = function () {
 
   controlRandomNumber = Math.floor((Math.random() * 102) + 19);
   $("#control").html("Random number to match: " + controlRandomNumber);
- /* function generate() {
-  controlRandomNumber = Math.floor((Math.random() * 121) + 18);
-  $("#control").text(controlRandomNumber);
-  }
-  generate();*/
+ 
   
   function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -57,18 +53,16 @@ $("#totScore").html("Total Score: " + counter);
 
 }// closes startGame
 
-resetAndStart();//calls function so when page loads it sets up
-//html.12
+resetAndStart();
+
 $(".crystal-image").on("click", function() {
 
   var crystalValue = ($(this).attr("data-value"));
   crystalValue = parseInt(crystalValue);
-  // We then add the crystalValue to the user's "counter" which is a global variable.
-  // Every click, from every crystal adds to the global counter.
-
+ 
   counter += crystalValue;
 
-  // All of the same game win-lose logic applies. So the rest remains unchanged.
+ 
    $("#totScore").html("Your total score is: " + counter);
 
   if (counter === controlRandomNumber) {
@@ -76,7 +70,7 @@ $(".crystal-image").on("click", function() {
     win++;
 
     $("#win").html("Wins: " + win);
-    //alert("You win!" + win);
+    
     counter = 0;
 
     resetAndStart();
@@ -87,7 +81,7 @@ $(".crystal-image").on("click", function() {
     lost++;
 
     $("#lost").html("Losses: " + lost);
-    //alert("You lose!!" + lost);
+    
     counter = 0;
 
     resetAndStart();
